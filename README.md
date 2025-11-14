@@ -1,7 +1,7 @@
 
   # One Pager : Melissa Relief Efforts
 
-  Onepager Melissa Relief Efforts is a fully responsive, interactive one-page website built using Vite, Tailwind CSS, and modern HTML/JavaScript.
+  This is a code bundle for One Pager : Melissa Relief Efforts. The original project is available at https://www.figma.com/design/kcfP106iyTVvz8OJ0mhSPj/One-Pager---Melissa-Relief-Efforts.
 
   ## Running the code
 

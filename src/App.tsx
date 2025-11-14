@@ -5,6 +5,7 @@ import imgContainer from "figma:asset/d7afc7e5ad4911a6b4656487edce3a5a71a3e3bc.p
 import imgSection from "figma:asset/31de8d15ac4dabac53a0ad3e9e7573b108b6ac43.png";
 import imgEmergencyResponseTeamInAction from "figma:asset/80c9b72e5f35920df6eba6765f947fe4da5f91be.png";
 import imgEmergencyResponseTeamInAction1 from "figma:asset/a49f0396b71952df758875221562fe6444aa94ce.png";
+import { DonateModal } from './components/DonateModal';
 
 function Logo() {
   return (
@@ -136,7 +137,7 @@ function WhiteLogo() {
   );
 }
 
-function Header() {
+function Header({ onDonateClick }: { onDonateClick: () => void }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -191,7 +192,7 @@ function Header() {
                 {item.label}
               </a>
             ))}
-            <button className="bg-[#053fe7] text-white px-4 py-2 rounded-lg hover:bg-[#042ec4] transition-colors duration-200">
+            <button onClick={onDonateClick} className="bg-[#053fe7] text-white px-4 py-2 rounded-lg hover:bg-[#042ec4] transition-colors duration-200">
               Donate
             </button>
           </nav>
@@ -219,7 +220,7 @@ function Header() {
                 {item.label}
               </a>
             ))}
-            <button className="w-full bg-[#053fe7] text-white px-4 py-2 rounded-lg mt-4 hover:bg-[#042ec4] transition-colors duration-200">
+            <button onClick={onDonateClick} className="w-full bg-[#053fe7] text-white px-4 py-2 rounded-lg mt-4 hover:bg-[#042ec4] transition-colors duration-200">
               Donate Now
             </button>
           </nav>
@@ -230,7 +231,7 @@ function Header() {
   );
 }
 
-function HeroSection() {
+function HeroSection({ onDonateClick }: { onDonateClick: () => void }) {
   return (
     <section className="relative min-h-[600px] md:min-h-[715px] flex items-center justify-center px-4 sm:px-6 lg:px-24 py-16 md:py-32">
       <img
@@ -249,7 +250,7 @@ function HeroSection() {
               Hurricane Melissa has left families, small businesses, and entire communities across Jamaica facing urgent needs—food, clean water, basic medical supplies, temporary shelter, and help restarting livelihoods. This fund is designed to deliver fast, accountable relief to those most affected.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-white text-neutral-950 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors duration-200">
+              <button onClick={onDonateClick} className="bg-white text-neutral-950 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors duration-200">
                 Donate Now
               </button>
           
@@ -527,11 +528,17 @@ function Footer() {
 }
 
 export default function App() {
+  const [isDonateModalOpen, setIsDonateModalOpen] = useState(false);
+
+  const handleDonateClick = () => {
+    setIsDonateModalOpen(true);
+  };
+
   return (
     <div className="min-h-screen bg-white">
-      <Header />
+      <Header onDonateClick={handleDonateClick} />
       <main className="pt-[73px]">
-        <HeroSection />
+        <HeroSection onDonateClick={handleDonateClick} />
         <WhoWeAreSection />
         <SpendingSection />
         <DisbursementSection />
@@ -539,6 +546,7 @@ export default function App() {
         <WithdrawalSection />
       </main>
       <Footer />
+      <DonateModal isOpen={isDonateModalOpen} onClose={() => setIsDonateModalOpen(false)} />
     </div>
   );
 }
