@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import svgPaths from "./imports/svg-iyozb0fv3v";
 import imgContainer from "figma:asset/d7afc7e5ad4911a6b4656487edce3a5a71a3e3bc.png";
-import imgSection from "figma:asset/31de8d15ac4dabac53a0ad3e9e7573b108b6ac43.png";
+import imgSection from "/Hero IMG-min.png";
 import imgEmergencyResponseTeamInAction from "figma:asset/80c9b72e5f35920df6eba6765f947fe4da5f91be.png";
 import imgEmergencyResponseTeamInAction1 from "figma:asset/a49f0396b71952df758875221562fe6444aa94ce.png";
 import { DonateModal } from './components/DonateModal';
