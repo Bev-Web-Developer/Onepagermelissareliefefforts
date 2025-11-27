@@ -243,7 +243,7 @@ function HeroSection({ onDonateClick }: { onDonateClick: () => void }) {
       
       <div className="relative z-10 w-full max-w-7xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12">
         <div className="bg-[#053fe7]/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 text-white">
-          <img alt="" className="absolute inset-0 w-full h-full object-cover opacity-60 rounded-2xl pointer-events-none" src={imgContainer} />
+          <img alt="" className="absolute inset-0 w-full h-full object-cover opacity-60 rounded-2xl pointer-events-none" src="/Card-Bg-min.png" />
           <div className="relative z-10">
             <h1 className="mb-4 text-[36px] font-bold">Jamaica's recovery from Hurricane Melissa</h1>
             <p className="mb-8">
