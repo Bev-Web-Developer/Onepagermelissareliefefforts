@@ -237,7 +237,7 @@ function HeroSection({ onDonateClick }: { onDonateClick: () => void }) {
       <img
         alt="Hurricane affected area"
         className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-        src="public/Hero IMG-min.png"
+        src="/Hero-IMG-min.png"
       />
       <div className="absolute inset-0 bg-black/20" />
       
@@ -288,7 +288,7 @@ function WhoWeAreSection() {
             <img
               alt="Emergency response team in action"
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-              src={imgEmergencyResponseTeamInAction}
+              src="/Who-we-are-IMG-min.png"
             />
           </div>
         </div>
@@ -301,7 +301,7 @@ function SpendingSection() {
   return (
     <section id="spending" className="relative py-12 md:py-24 px-4 sm:px-6 lg:px-20">
       <div className="absolute inset-0 bg-[#053fe7]" />
-      <img alt="" className="absolute inset-0 w-full h-full object-cover opacity-60 pointer-events-none" src={imgContainer} />
+      <img alt="" className="absolute inset-0 w-full h-full object-cover opacity-60 pointer-events-none" src="/funds-BG-min.png"/>
       
       <div className="relative z-10 max-w-7xl mx-auto">
         <div className="text-center mb-12 md:mb-16">
@@ -346,7 +346,7 @@ function DisbursementSection() {
             <img
               alt="Emergency response team in action"
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-              src={imgEmergencyResponseTeamInAction1}
+              src="/Disbursement-IMG-min.png"
             />
           </div>
 
@@ -464,7 +464,7 @@ function GovernanceSection() {
               key={index}
               className="relative bg-[#053fe7] rounded-2xl p-6 border border-[rgba(0,0,0,0.1)] hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden"
             >
-              <img alt="" className="absolute inset-0 w-full h-full object-cover opacity-60 rounded-2xl pointer-events-none" src={imgContainer} />
+              <img alt="" className="absolute inset-0 w-full h-full object-cover opacity-60 rounded-2xl pointer-events-none" src="/Card-Bg-min.png" />
               <div className="relative z-10">
                 <div className="mb-4">{card.icon}</div>
                 <h3 className="text-[#75d4f6] mb-3">{card.title}</h3>
@@ -484,7 +484,7 @@ function WithdrawalSection() {
       <img
         alt="Background"
         className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-        src={imgEmergencyResponseTeamInAction}
+        src="/plan-IMG-min.png"
       />
       <div className="absolute inset-0 bg-black/30" />
 
